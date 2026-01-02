@@ -1,0 +1,218 @@
+* {
+    margin: 2px;
+    padding: 2px;
+    text-align: center;
+    box-sizing: border-box;
+    font-family: "Sekuya", system-ui;
+    font-size: 15px;
+
+
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(120deg,
+            #0f172a,
+            #1e293b,
+            #312e81,
+            #020617);
+    background-size: 300% 300%;
+    animation: bgAnime 15s ease infinite;
+    color: #000000;
+    font-family: "Segoe UI", sans-serif;
+    overflow-x: hidden;
+}
+
+@keyframes bgAnime {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+button {
+    padding: 14px 22px;
+    border-radius: 12px;
+    border: none;
+    background: linear-gradient(135deg, #646464, #b4b4b4);
+    color: #2b1b00;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+.topo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 20px;
+    background: linear-gradient(135deg, #1f2348, #2f2a6d);
+    border-radius: 16px;
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.15);
+    width: fit-content;
+    margin: 40px auto;
+}
+
+.topo input {
+    width: 280px;
+    padding: 14px 18px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: #9d9d9d;
+    color: #000000;
+}
+
+
+
+.card-description {
+    background: var(--info-bg);
+    background-color: #ffffff;
+    margin: 0;
+    border-radius: 8px;
+    font-size: 15px;
+    text-align: left;
+    transition: all 0.4s ease;
+    color: #2b1b0f;
+    border-right: 5px solid rgba(87, 87, 87, 0.6);
+    border-left: 5px solid rgba(87, 87, 87, 0.6);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 20px;
+    backdrop-filter: blur(6px);
+    border-radius: 20px;
+}
+
+.container-color {
+    background: rgba(0, 0, 0, 0.35);
+}
+
+
+#card-area img {
+    width: 280px;
+    border-radius: 12px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+}
+
+.info-panel {
+    width: 420px;
+    background: var(--info-bg);
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: inset 0 0 0 3px #c2a14d,
+        0 10px 25px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    animation: slideIn 0.5s ease;
+
+    transition: all 0.4s ease;
+}
+
+
+.info-panel p {
+    background: (120deg,
+            #0f172a,
+            #1e293b,
+            #312e81,
+            #020617);
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.descricao {
+    font-style: italic;
+    line-height: 1.6;
+}
+
+.estrelas {
+    color: #d97706;
+    font-size: 20px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* PARTÍCULAS */
+.particle {
+    position: fixed;
+    width: 6px;
+    height: 6px;
+    background: rgba(168, 85, 247, 0.7);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: floatUp linear infinite;
+}
+
+@keyframes floatUp {
+    from {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-10vh);
+        opacity: 0;
+    }
+}
+
+.theme-monster {
+    --card-bg: #f5e6c8;
+    --info-bg: #d2b48c;
+    --border-color: #8b5a2b;
+}
+
+.theme-spell {
+    --card-bg: #e0f2e9;
+    --info-bg: #8fd3b6;
+    --border-color: #1f7a5c;
+}
+
+.theme-trap {
+    --card-bg: #f0e0f5;
+    --info-bg: #c89adf;
+    --border-color: #6a1b9a;
+}
+
+.hidden {
+  display: none;
+}
